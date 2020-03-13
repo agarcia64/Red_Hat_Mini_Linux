@@ -6,7 +6,7 @@ import re
 import pathlib
 import shutil
 
-class mini_linux():
+class MiniLinux():
 	##############################################################################
 	# Variables
 	##############################################################################
@@ -500,7 +500,7 @@ class mini_linux():
 ##############################################################################
 if __name__ == '__main__':
 
-	miniLinuxInstance = mini_linux()
+	miniLinuxInstance = MiniLinux()
 
 	try:
 		# main loop
