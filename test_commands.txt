@@ -1,0 +1,27 @@
+## COMMANDS THAT WORK ##
+./mini-grep Red 
+./mini-grep Red ['D:\_Documents\Red Hat\Coding Exercise\test_commands.txt']
+./mini-grep -q -e pattern ['D:\_Documents\Red Hat\Coding Exercise']
+./mini-grep -q -e pattern ["D:\_Documents\Red Hat\Coding Exercise"]
+./mini-grep -q -e pattern ['D:\_Documents\Red Hat\Coding Exercises']
+./mini-grep -q -e pattern ['D:\_Documents\Red Hat\', 'D:\_Documents\]
+./mini-grep -q -e pattern ["D:\_Documents\Red Hat\", 'D:\_Documents\]
+./mini-ls -r
+./mini-ls -r ['D:\_Documents\Red Hat\Coding Exercise']
+./mini-ls ['D:\_Documents\Red Hat\Coding Exercise\paths.txt']
+./mini-ls ['D:\_Documents\Red Hat\Coding Exercise\paths.txt', 'D:\_Documents\Red Hat\Coding Exercise\BugList.txt']
+./mini-ls ['D:\_Documents\Red Hat\Coding Exercise\paths.txt', D:\_Documents\]
+./mini-df ["D:\_Documents\Red Hat\", 'D:\_Documents\]
+./mini-df ["D:\_Documents\Red Hat\", 'D:\_Documents\']
+
+
+## COMMANDS THAT THROW ERRORS ##
+./mini-grep -q -e -t pattern ['D:\_Documents\Red Hat\', 'D:\_Documents\]
+./mini-grep pattern1 ['D:\_Documents\Red Hat\'] [D:\_Documents\]
+./mini-grep ['D:\_Documents\Red Hat\'] pattern1
+
+## COMMANDS THAT DO NOT THROW ERRORS WHEN THEY SHOULD ##
+# accepts pattern1, ignores 2 and 3
+./mini-grep pattern1 pattern2 pattern3 ['D:\_Documents\Red Hat\', 'D:\_Documents\]
+# ignores C:\xxxx, displays df for the rest
+./mini-df -h ["D:\_Documents\Red Hat\", 'D:\_Documents\', C:\xxxx]
